@@ -1,4 +1,4 @@
-# MetodosNumericosTema4Problemario
+# MetodosNumericosTema3Problemario
 ## Problemario Gabriel Hernández 
 
 ### Equipo
