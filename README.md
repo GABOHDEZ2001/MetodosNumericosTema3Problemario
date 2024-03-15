@@ -20,6 +20,7 @@ El Método de Eliminación de Gauss consiste en utilizar reiteradas veces las pr
 
 
 
+
 ### Implentacion 
 
 
@@ -68,7 +69,114 @@ Es un método iterativo, lo que significa que se parte de una aproximación inic
 
 ### Pseudocódigo 
 
+CONSTANTES:
+        MAX_ITERATIONS = 100
+        TOLERANCIA = 0.0001
+
+    FUNCIÓN principal():
+        // Matriz de coeficientes del sistema de ecuaciones
+        coefficients = {
+            {10, -1, 2, 0},
+            {-1, 11, -1, 3},
+            {2, -1, 10, -1},
+            {0, 3, -1, 8}
+        }
+        
+        // Valores iniciales para las incógnitas
+        initialValues = {0, 0, 0, 0}
+
+        // Llamar al método gaussSeidel para obtener las soluciones
+        soluciones = gaussSeidel(coefficients, initialValues)
+
+        // Mostrar las soluciones
+        MOSTRAR "Soluciones:"
+        PARA cada i de 0 hasta longitud(soluciones) - 1 HACER
+            MOSTRAR "x[" + i + "] = " + soluciones[i]
+        FIN PARA
+
+    FUNCIÓN gaussSeidel(coefficients, initialValues):
+        n = longitud(coefficients) // Obtener la dimensión del sistema
+        soluciones = arreglo de tamaño n
+        nuevasSoluciones = arreglo de tamaño n
+        iteraciones = 0
+        error = 0.0
+
+        REPETIR:
+            PARA cada i de 0 hasta n - 1 HACER
+                suma = 0.0
+                PARA cada j de 0 hasta n - 1 HACER
+                    SI j != i ENTONCES
+                        suma += coefficients[i][j] * nuevasSoluciones[j]
+                    FIN SI
+                FIN PARA
+                nuevasSoluciones[i] = (initialValues[i] - suma) / coefficients[i][i]
+            FIN PARA
+
+            error = 0.0
+            PARA cada i de 0 hasta n - 1 HACER
+                error = MAX(error, ABS(nuevasSoluciones[i] - soluciones[i]))
+                soluciones[i] = nuevasSoluciones[i]
+            FIN PARA
+
+            iteraciones++
+
+        HASTA QUE error <= TOLERANCIA O iteraciones >= MAX_ITERATIONS
+
+        SI iteraciones >= MAX_ITERATIONS ENTONCES
+            MOSTRAR "Se alcanzó el máximo de iteraciones sin convergencia"
+        FIN SI
+
+        RETORNAR soluciones
+
+FIN CLASE
+
 ### Implentacion 
+
+ - Implementacion usando Python
+
+MAX_ITERACIONES = 100
+TOLERANCIA = 0.0001
+
+def gauss_seidel(coeficientes, valores_iniciales):
+    n = len(coeficientes)
+    soluciones = [0] * n
+    nuevas_soluciones = [0] * n
+    iteraciones = 0
+    error = 0.0
+
+    while iteraciones < MAX_ITERACIONES:
+        for i in range(n):
+            suma = 0.0
+            for j in range(n):
+                if j != i:
+                    suma += coeficientes[i][j] * nuevas_soluciones[j]
+            nuevas_soluciones[i] = (valores_iniciales[i] - suma) / coeficientes[i][i]
+
+        error = max(abs(nuevas_soluciones[i] - soluciones[i]) for i in range(n))
+        
+        if error < TOLERANCIA:
+            break
+        
+        soluciones = nuevas_soluciones.copy()
+        iteraciones += 1
+
+    if iteraciones >= MAX_ITERACIONES:
+        print("Se alcanzó el máximo de iteraciones sin convergencia")
+    
+    return soluciones
+
+coeficientes = [
+    [10, -1, 2, 0],
+    [-1, 11, -1, 3],
+    [2, -1, 10, -1],
+    [0, 3, -1, 8]
+]
+valores_iniciales = [0, 0, 0, 0]
+
+soluciones = gauss_seidel(coeficientes, valores_iniciales)
+print("Soluciones:")
+for i, sol in enumerate(soluciones):
+    print(f"x[{i}] = {sol}")
 
 
 
