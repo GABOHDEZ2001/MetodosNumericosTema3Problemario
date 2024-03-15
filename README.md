@@ -97,6 +97,12 @@ resolver_sistema(matriz_ejemplo)
 
 [Ejemplo 3](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/ProblemarioTema3/src/EliminacionGaussianaEjemplo3.java)
 
+[Ejemplo 4](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/ProblemarioTema3a/src/EliminacionGaussianaEjemplo4.java)
+
+[Ejemplo 5](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/ProblemarioTema3a/src/EliminacionGaussianaEjemplo5.java)
+
+
+
 
 ==========================================================================================================================
 
@@ -202,6 +208,12 @@ resolver_sistema(matriz)
 [Ejemplo 2](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/ProblemarioTema3/src/GaussJordanEjemplo2.java)
 
 [Ejemplo 3](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/ProblemarioTema3/src/GaussJordanEjemplo3.java)
+
+[Ejemplo 4](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/ProblemarioTema3a/src/GaussJordanEjemplo4.java)
+
+[Ejemplo 5](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/ProblemarioTema3a/src/GaussJordanEjemplo5.java)
+
+
 
 
 ==========================================================================================================================
@@ -329,9 +341,13 @@ for i, sol in enumerate(soluciones):
 
 [Ejemplo 1](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/ProblemarioTema3/src/GaussSeidelEjemplo1.java)
 
-[Ejemplo 2](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/ProblemarioTema3/src/GaussSeidelEjemplo1.java)
+[Ejemplo 2](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/ProblemarioTema3/src/GaussSeidelEjemplo2.java)
 
-[Ejemplo 3](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/ProblemarioTema3/src/GaussSeidelEjemplo1.java)
+[Ejemplo 3](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/ProblemarioTema3/src/GaussSeidelEjemplo3.java)
+
+[Ejemplo 4](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/ProblemarioTema3a/src/GaussSeidelEjemplo4.java)
+
+[Ejemplo 5](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/ProblemarioTema3a/src/GaussSeidelEjemplo5.java)
 
 
 
@@ -442,9 +458,15 @@ jacobi(x, y, z, tolerancia, max_iteraciones)
 
 [Ejemplo 1](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/ProblemarioTema3/src/MetodoJacobiEjemplo1.java)
 
-[Ejemplo 2](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/ProblemarioTema3/src/MetodoJacobiEjemplo1.java)
+[Ejemplo 2](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/ProblemarioTema3/src/MetodoJacobiEjemplo2.java)
 
-[Ejemplo 3](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/ProblemarioTema3/src/MetodoJacobiEjemplo1.java)
+[Ejemplo 3](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/ProblemarioTema3/src/MetodoJacobiEjemplo3.java)
+
+[Ejemplo 4](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/ProblemarioTema3a/src/MetodoJacobiEjemplo4.java)
+
+[Ejemplo 5](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/ProblemarioTema3a/src/MetodoJacobiEjemplo5.java)
+
+
 
 
 
