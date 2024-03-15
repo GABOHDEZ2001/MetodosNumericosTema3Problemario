@@ -58,14 +58,14 @@ def resolver_sistema(matriz):
     filas = len(matriz)
     columnas = len(matriz[0]) - 1  # Ignoramos la última columna (soluciones)
 
-    # Aplicar eliminación gaussiana
+    #Aplicar eliminación gaussiana
     for i in range(filas - 1):
         for j in range(i + 1, filas):
             factor = matriz[j][i] / matriz[i][i]
             for k in range(i, columnas + 1):
                 matriz[j][k] -= factor * matriz[i][k]
 
-    # Realizar sustitución hacia atrás
+    #Realizar sustitución hacia atrás
     soluciones = [0] * filas
     for i in range(filas - 1, -1, -1):
         suma = 0
@@ -73,19 +73,19 @@ def resolver_sistema(matriz):
             suma += matriz[i][j] * soluciones[j]
         soluciones[i] = (matriz[i][columnas] - suma) / matriz[i][i]
 
-    # Mostrar las soluciones
+ 
     print("Soluciones:")
     for i in range(filas):
         print(f"x{i + 1} = {soluciones[i]}")
 
-# Matriz de ejemplo
+#Matriz de ejemplo
 matriz_ejemplo = [
     [2, 1, -1, 8],
     [-3, -1, 2, -11],
     [-2, 1, 2, -3]
 ]
 
-# Llamar a la función con la matriz de ejemplo
+#Llamar a la función con la matriz de ejemplo
 resolver_sistema(matriz_ejemplo)
 
 
