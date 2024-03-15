@@ -23,7 +23,14 @@ El Método de Eliminación de Gauss consiste en utilizar reiteradas veces las pr
 
 ### Ejercicios en java
 
-[Ejemplo 1](https://github.com/GABOHDEZ2001/MetodoGaussSeidels/blob/main/MetodoGaussSeidel/GaussSeidel.java)
+[Ejemplo 1](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/ProblemarioTema3/src/EliminacionGaussianaEjemplo1.java)
+
+[Ejemplo 2](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/ProblemarioTema3/src/EliminacionGaussianaEjemplo2.java)
+
+[Ejemplo 3](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/ProblemarioTema3/src/EliminacionGaussianaEjemplo3.java)
+
+
+
 
 
 
