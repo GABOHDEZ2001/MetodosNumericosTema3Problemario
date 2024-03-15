@@ -10,7 +10,7 @@
 - López Gutiérrez Nili Estefanía
 
 
-## MÉTODO DE ELIMINACIÓN GAUSSSIANA
+## Método de Eliminación Gaussiana
 ### Descripcion 
 
 El Método de Eliminación de Gauss consiste en utilizar reiteradas veces las propiedades de los sistemas lineales, que hemos visto ante- riormente, para transformar un sistema de ecuaciones lineales en otro equivalente (con las mismas soluciones) pero que sea triangular.
@@ -30,10 +30,10 @@ El Método de Eliminación de Gauss consiste en utilizar reiteradas veces las pr
 [Ejemplo 3](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/ProblemarioTema3/src/EliminacionGaussianaEjemplo3.java)
 
 
-=========================================================================================================================================================
+==========================================================================================================================
 
 
-## MÉTODO DE Gauss Jordan
+## Método de Gauss Jordan
 ### Descripcion 
 
 El Método.
@@ -51,6 +51,55 @@ El Método.
 [Ejemplo 2](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/ProblemarioTema3/src/GaussJordanEjemplo2.java)
 
 [Ejemplo 3](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/ProblemarioTema3/src/GaussJordanEjemplo3.java)
+
+
+==========================================================================================================================
+
+
+## Método de Gauss Seidel
+### Descripcion 
+
+El Método.
+
+### Pseudocódigo 
+
+### Implentacion 
+
+
+
+### Ejercicios en java
+
+[Ejemplo 1](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/ProblemarioTema3/src/GaussSeidelEjemplo1.java)
+
+[Ejemplo 2](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/ProblemarioTema3/src/GaussSeidelEjemplo1.java)
+
+[Ejemplo 3](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/ProblemarioTema3/src/GaussSeidelEjemplo1.java)
+
+
+
+==========================================================================================================================
+
+
+## Método de Jacobi
+### Descripcion 
+
+El Método.
+
+### Pseudocódigo 
+
+### Implentacion 
+
+
+
+### Ejercicios en java
+
+[Ejemplo 1](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/ProblemarioTema3/src/MetodoJacobiEjemplo1.java)
+
+[Ejemplo 2](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/ProblemarioTema3/src/MetodoJacobiEjemplo1.java)
+
+[Ejemplo 3](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/ProblemarioTema3/src/MetodoJacobiEjemplo1.java)
+
+
 
 
 
