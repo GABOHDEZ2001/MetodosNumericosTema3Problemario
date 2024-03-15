@@ -17,12 +17,76 @@ El Método de Eliminación de Gauss consiste en utilizar reiteradas veces las pr
 
 ### Pseudocódigo 
 
+PROCEDURE resolverSistema(matriz)
+    filas = LONGITUD(matriz)
+    columnas = LONGITUD(matriz[0]) - 1  // Ignoramos la última columna (soluciones)
+
+    // Aplicar eliminación gaussiana
+    PARA i DESDE 0 HASTA filas - 2 HACER
+        PARA j DESDE i + 1 HASTA filas - 1 HACER
+            factor = matriz[j][i] / matriz[i][i]
+            PARA k DESDE i HASTA columnas HACER
+                matriz[j][k] = matriz[j][k] - factor * matriz[i][k]
+
+    // Realizar sustitución hacia atrás
+    ARREGLO soluciones CON LONGITUD(filas)
+    PARA i DESDE filas - 1 HASTA 0 CON PASO -1 HACER
+        suma = 0
+        PARA j DESDE i + 1 HASTA filas - 1 HACER
+            suma = suma + matriz[i][j] * soluciones[j]
+        soluciones[i] = (matriz[i][columnas] - suma) / matriz[i][i]
+
+    // Mostrar las soluciones
+    IMPRIMIR "Soluciones:"
+    PARA i DESDE 0 HASTA filas - 1 HACER
+        IMPRIMIR "x" + (i + 1) + " = " + soluciones[i]
+FIN PROCEDIMIENTO
+
+// Llamar a la función con la matriz de ejemplo
+matrizEjemplo = {
+    {2, 1, -1, 8},
+    {-3, -1, 2, -11},
+    {-2, 1, 2, -3}
+}
+resolverSistema(matrizEjemplo)
 
 
+### Implementacion 
+- Implementacion en Python
+- 
+def resolver_sistema(matriz):
+    filas = len(matriz)
+    columnas = len(matriz[0]) - 1  # Ignoramos la última columna (soluciones)
 
+    # Aplicar eliminación gaussiana
+    for i in range(filas - 1):
+        for j in range(i + 1, filas):
+            factor = matriz[j][i] / matriz[i][i]
+            for k in range(i, columnas + 1):
+                matriz[j][k] -= factor * matriz[i][k]
 
-### Implentacion 
+    # Realizar sustitución hacia atrás
+    soluciones = [0] * filas
+    for i in range(filas - 1, -1, -1):
+        suma = 0
+        for j in range(i + 1, filas):
+            suma += matriz[i][j] * soluciones[j]
+        soluciones[i] = (matriz[i][columnas] - suma) / matriz[i][i]
 
+    # Mostrar las soluciones
+    print("Soluciones:")
+    for i in range(filas):
+        print(f"x{i + 1} = {soluciones[i]}")
+
+# Matriz de ejemplo
+matriz_ejemplo = [
+    [2, 1, -1, 8],
+    [-3, -1, 2, -11],
+    [-2, 1, 2, -3]
+]
+
+# Llamar a la función con la matriz de ejemplo
+resolver_sistema(matriz_ejemplo)
 
 
 ### Ejercicios en java
