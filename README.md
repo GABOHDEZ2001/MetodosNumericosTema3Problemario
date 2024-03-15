@@ -17,6 +17,9 @@ El Método de Eliminación de Gauss consiste en utilizar reiteradas veces las pr
 
 ### Pseudocódigo 
 
+
+
+
 ### Implentacion 
 
 
@@ -36,9 +39,11 @@ El Método de Eliminación de Gauss consiste en utilizar reiteradas veces las pr
 ## Método de Gauss Jordan
 ### Descripcion 
 
-El Método.
+EEl método de eliminación Gauss-Jordan consiste en representar el sistema de ecuaciones por medio de una matriz y obtener a partir de ella lo que se define como la matriz escalonada equivalente, a través de la cual se determina el tipo de solución de la ecuación.
 
 ### Pseudocódigo 
+
+
 
 ### Implentacion 
 
@@ -59,7 +64,7 @@ El Método.
 ## Método de Gauss Seidel
 ### Descripcion 
 
-El Método.
+Es un método iterativo, lo que significa que se parte de una aproximación inicial y se repite el proceso hasta llegar a una solución con un margen de error tan pequeño como se quiera. Buscamos la solución a un sistema de ecuaciones lineales, en notación matricial: donde: , esto es, la matriz N es triangular superior.
 
 ### Pseudocódigo 
 
@@ -82,13 +87,102 @@ El Método.
 
 ## Método de Jacobi
 ### Descripcion 
-
-El Método.
+La base del método consiste en construir una sucesión convergente definida iterativamente. El límite de esta sucesión es precisamente la solución del sistema. A efectos prácticos si el algoritmo se detiene después de un número finito de pasos se llega a una aproximación al valor de x de la solución del sistema.
 
 ### Pseudocódigo 
 
+PROCEDIMIENTO calcularNuevoX(x, y, z)
+    RETORNAR (4 - 2 * y + z) / 6.0
+
+PROCEDIMIENTO calcularNuevoY(x, y, z)
+    RETORNAR (3 - x - z) / 5.0
+
+PROCEDIMIENTO calcularNuevoZ(x, y, z)
+    RETORNAR (27 - 2 * x - y) / 4.0
+
+PROCEDIMIENTO jacobi(x, y, z, tolerancia, maxIteraciones)
+    iteraciones = 0
+    MIENTRAS iteraciones < maxIteraciones HACER
+        nuevoX = calcularNuevoX(x, y, z)
+        nuevoY = calcularNuevoY(x, y, z)
+        nuevoZ = calcularNuevoZ(x, y, z)
+        
+        maxDiferencia = MAX(ABS(nuevoX - x), MAX(ABS(nuevoY - y), ABS(nuevoZ - z)))
+        
+        SI maxDiferencia < tolerancia ENTONCES
+            IMPRIMIR "Convergencia alcanzada en la iteración " + iteraciones
+            IMPRIMIR "x = " + nuevoX
+            IMPRIMIR "y = " + nuevoY
+            IMPRIMIR "z = " + nuevoZ
+            RETORNAR
+        FIN SI
+        
+        x = nuevoX
+        y = nuevoY
+        z = nuevoZ
+        
+        iteraciones = iteraciones + 1
+    FIN MIENTRAS
+    
+    IMPRIMIR "No se alcanzó la convergencia después de " + maxIteraciones + " iteraciones."
+
+PROCEDIMIENTO principal()
+    x = 0 // Valor inicial de x
+    y = 0 // Valor inicial de y
+    z = 0 // Valor inicial de z
+    tolerancia = 0.0001 // Tolerancia
+    maxIteraciones = 100 // Número máximo de iteraciones
+    
+    jacobi(x, y, z, tolerancia, maxIteraciones)
+
+LLAMAR principal()
+
+
+
 ### Implentacion 
 
+ - Implementacion usando Python
+
+def calcular_nuevo_x(y, z):
+    return (4 - 2 * y + z) / 6.0
+
+def calcular_nuevo_y(x, z):
+    return (3 - x - z) / 5.0
+
+def calcular_nuevo_z(x, y):
+    return (27 - 2 * x - y) / 4.0
+
+def jacobi(x, y, z, tolerancia, max_iteraciones):
+    iteraciones = 0
+    while iteraciones < max_iteraciones:
+        nuevo_x = calcular_nuevo_x(y, z)
+        nuevo_y = calcular_nuevo_y(x, z)
+        nuevo_z = calcular_nuevo_z(x, y)
+
+        max_diferencia = max(abs(nuevo_x - x), abs(nuevo_y - y), abs(nuevo_z - z))
+
+        if max_diferencia < tolerancia:
+            print("Convergencia alcanzada en la iteración", iteraciones)
+            print("x =", nuevo_x)
+            print("y =", nuevo_y)
+            print("z =", nuevo_z)
+            return
+
+        x, y, z = nuevo_x, nuevo_y, nuevo_z
+        iteraciones += 1
+
+    print("No se alcanzó la convergencia después de", max_iteraciones, "iteraciones.")
+
+x = 0
+y = 0
+z = 0
+
+
+tolerancia = 0.0001
+max_iteraciones = 100
+
+
+jacobi(x, y, z, tolerancia, max_iteraciones)
 
 
 ### Ejercicios en java
