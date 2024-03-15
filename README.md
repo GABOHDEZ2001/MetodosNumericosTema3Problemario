@@ -40,14 +40,95 @@ El Método de Eliminación de Gauss consiste en utilizar reiteradas veces las pr
 ## Método de Gauss Jordan
 ### Descripcion 
 
-EEl método de eliminación Gauss-Jordan consiste en representar el sistema de ecuaciones por medio de una matriz y obtener a partir de ella lo que se define como la matriz escalonada equivalente, a través de la cual se determina el tipo de solución de la ecuación.
+El método de eliminación Gauss-Jordan consiste en representar el sistema de ecuaciones por medio de una matriz y obtener a partir de ella lo que se define como la matriz escalonada equivalente, a través de la cual se determina el tipo de solución de la ecuación.
 
 ### Pseudocódigo 
 
+    FUNCIÓN principal():
+        matriz = {
+            {2, 1, -1, 8},
+            {-3, -1, 2, -11},
+            {-2, 1, 2, -3}
+        }
+        resolverSistema(matriz)
+
+    FUNCIÓN resolverSistema(matriz):
+        filas = longitud(matriz)
+        columnas = longitud(matriz[0])
+
+        // Escalonar la matriz
+        PARA cada i de 0 hasta filas - 1 HACER
+            pivote = matriz[i][i]
+            PARA cada j de i + 1 hasta filas - 1 HACER
+                factor = matriz[j][i] / pivote
+                PARA cada k de i hasta columnas - 1 HACER
+                    matriz[j][k] -= matriz[i][k] * factor
+                FIN PARA
+            FIN PARA
+        FIN PARA
+
+        // Reducir la matriz a forma escalonada reducida
+        PARA cada i de filas - 1 hasta 0 HACER
+            pivote = matriz[i][i]
+            PARA cada j de i - 1 hasta 0 HACER
+                factor = matriz[j][i] / pivote
+                PARA cada k de i hasta columnas - 1 HACER
+                    matriz[j][k] -= matriz[i][k] * factor
+                FIN PARA
+            FIN PARA
+        FIN PARA
+
+        // Normalizar la matriz
+        PARA cada i de 0 hasta filas - 1 HACER
+            pivote = matriz[i][i]
+            PARA cada j de i hasta columnas - 1 HACER
+                matriz[i][j] /= pivote
+            FIN PARA
+        FIN PARA
+
+        // Imprimir la solución
+        PARA cada i de 0 hasta filas - 1 HACER
+            IMPRIMIR "x" + (i + 1) + " = " + matriz[i][columnas - 1]
+        FIN PARA
+
+FIN CLASE
 
 
 ### Implentacion 
 
+def resolver_sistema(matriz):
+    filas = len(matriz)
+    columnas = len(matriz[0])
+
+    for i in range(filas):
+        pivote = matriz[i][i]
+        for j in range(i + 1, filas):
+            factor = matriz[j][i] / pivote
+            for k in range(i, columnas):
+                matriz[j][k] -= matriz[i][k] * factor
+
+    for i in range(filas - 1, -1, -1):
+        pivote = matriz[i][i]
+        for j in range(i - 1, -1, -1):
+            factor = matriz[j][i] / pivote
+            for k in range(i, columnas):
+                matriz[j][k] -= matriz[i][k] * factor
+
+    for i in range(filas):
+        pivote = matriz[i][i]
+        for j in range(columnas):
+            matriz[i][j] /= pivote
+
+    for i in range(filas):
+        print("x" + str(i + 1) + " =", matriz[i][columnas - 1])
+
+matriz = [
+    [2, 1, -1, 8],
+    [-3, -1, 2, -11],
+    [-2, 1, 2, -3]
+]
+
+resolver_sistema(matriz)
 
 
 ### Ejercicios en java
