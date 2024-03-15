@@ -139,7 +139,7 @@ LLAMAR principal()
 
 
 
-### Implentacion 
+### Implementacion 
 
  - Implementacion usando Python
 
