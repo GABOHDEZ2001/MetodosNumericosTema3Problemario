@@ -53,7 +53,7 @@ resolverSistema(matrizEjemplo)
 
 ### Implementacion 
 - Implementacion en Python
-- 
+
 def resolver_sistema(matriz):
     filas = len(matriz)
     columnas = len(matriz[0]) - 1  # Ignoramos la última columna (soluciones)
@@ -158,7 +158,7 @@ El método de eliminación Gauss-Jordan consiste en representar el sistema de ec
 FIN CLASE
 
 
-### Implentacion 
+### Implementacion 
 
 def resolver_sistema(matriz):
     filas = len(matriz)
