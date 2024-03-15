@@ -30,6 +30,31 @@ El Método de Eliminación de Gauss consiste en utilizar reiteradas veces las pr
 [Ejemplo 3](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/ProblemarioTema3/src/EliminacionGaussianaEjemplo3.java)
 
 
+=========================================================================================================================================================
+
+
+## MÉTODO DE Gauss Jordan
+### Descripcion 
+
+El Método.
+
+### Pseudocódigo 
+
+### Implentacion 
+
+
+
+### Ejercicios en java
+
+[Ejemplo 1](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/ProblemarioTema3/src/GaussJordanEjemplo1.java)
+
+[Ejemplo 2](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/ProblemarioTema3/src/GaussJordanEjemplo2.java)
+
+[Ejemplo 3](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/ProblemarioTema3/src/GaussJordanEjemplo3.java)
+
+
+
+
 
 
 
