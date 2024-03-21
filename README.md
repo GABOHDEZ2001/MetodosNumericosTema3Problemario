@@ -93,7 +93,9 @@ resolver_sistema(matriz_ejemplo)
 
 [Ejemplo 1](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/ProblemarioTema3/src/EliminacionGaussianaEjemplo1.java)
 
-[Resultado Ejemplo 1](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/ProblemarioTema3/src/EliminacionGaussianaEjemplo1.java)
+[Resultado Ejemplo 1 Entrada](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/Resultado%20Ejemplo%201%20liminacionGaussianaEjemplo1/Captura%20de%20pantalla%202024-03-21%20131717.png)
+[Resultado Ejemplo 1 Salida](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/Resultado%20Ejemplo%201%20liminacionGaussianaEjemplo1/Captura%20de%20pantalla%202024-03-21%20131757.png)
+
 
 [Ejemplo 2](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/ProblemarioTema3/src/EliminacionGaussianaEjemplo2.java)
 
