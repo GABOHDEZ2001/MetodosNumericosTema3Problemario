@@ -208,6 +208,7 @@ resolver_sistema(matriz)
 ### Ejercicios en java
 
 [Ejemplo 1](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/ProblemarioTema3/src/GaussJordanEjemplo1.java)
+
 [Resultado Ejemplo 1 Entrada](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/RESULTDADO%20GaussJordanEjemplo1/Captura%20de%20pantalla%202024-03-21%20132039.png)
 [Resultado Ejemplo 1 Salida](https://github.com/GABOHDEZ2001/ProblemarioTema3/blob/main/RESULTDADO%20GaussJordanEjemplo1/Captura%20de%20pantalla%202024-03-21%20132039.png)
 
